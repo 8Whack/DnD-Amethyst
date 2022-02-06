@@ -293,34 +293,20 @@ document.getElementById( 'tempHP-').addEventListener('click', subTempHP)
 function addHitDice (event){
     event.preventDefault();
     hd = document.getElementById('hitDice').innerHTML
-    amt = document.getElementById('hitDiceChange').value
-    if (amt === ''){
-        hd = +hd + 1
+    qty = document.getElementById('hitDiceQty').value
+    shape = document.getElementById('dieShape').value
+    if (qty === ''){
+        alert('Please select the quanitity and shape of your hit dice.')
     }else{
-        hd = +hd + +amt
+        hd = `${qty} ${shape}`
     }
 
     document.getElementById('hitDice').innerHTML = hd
-    document.getElementById('hitDiceChange').value = ''
+    document.getElementById('hitDiceQty').value = ''
+    document.getElementById('dieShape').value = 'd4'
 }
 
 document.getElementById( 'addHitDice').addEventListener('click', addHitDice)
-
-function subHitDice (event){
-    event.preventDefault();
-    hd = document.getElementById('hitDice').innerHTML
-    amt = document.getElementById('hitDiceChange').value
-    if (amt === ''){
-        hd = +hd - 1
-    }else{
-        hd = +hd - +amt
-    }
-
-    document.getElementById('hitDice').innerHTML = hd
-    document.getElementById('hitDiceChange').value = ''
-}
-
-document.getElementById( 'subHitDice').addEventListener('click', subHitDice)
 
 function addStr (event){
     event.preventDefault();

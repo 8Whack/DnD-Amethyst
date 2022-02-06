@@ -296,9 +296,16 @@
                     <h4>Hit Dice</h4>
                     <p id ='hitDice' class='stats'>0</p>
                     <div>
-                        <button id = 'subHitDice'>-</button>
-                        <input id = 'hitDiceChange' type="number" class ='skills'>
-                        <button id = 'addHitDice'>+</button>
+                        <input id = 'hitDiceQty' type="text" class ='skills' placeholder="#Dice">
+                        <select id="dieShape">
+                            <option value="d4">d4</option>
+                            <option value="d6">d6</option>
+                            <option value="d8">d8</option>
+                            <option value="d10">d10</option>
+                            <option value="d12">d12</option>
+                            <option value="d20">d20</option>
+                        </select>
+                        <button id = 'addHitDice'>Add</button>
                     </div>
                 </div>
                 <div id = 'deathSaves' class = 'border center column'>
