@@ -332,6 +332,10 @@ function addStr (event){
     }else{
         str = +str + +amt
     }
+    if (str > 30){
+        alert('Strength cannot be more than 30')
+        str = 30;
+    }
     mod = Math.floor((str-10)/2)
     if(mod > -1){
         mod = `+${mod}`
@@ -353,6 +357,10 @@ function subStr (event){
         str = +str - 1
     }else{
         str = +str - +amt
+    }
+    if (str < 0){
+        alert('Strength cannot be less than 1')
+        str = 1;
     }
     mod = Math.floor((str-10)/2)
     if(mod > -1){
@@ -376,6 +384,10 @@ function addDex (event){
     }else{
         dex = +dex + +amt
     }
+    if (dex > 30){
+        alert('Dexterity cannot be more than 30')
+        dex = 30;
+    }
     mod = Math.floor((dex-10)/2)
     if(mod > -1){
         mod = `+${mod}`
@@ -397,6 +409,10 @@ function subDex (event){
         dex = +dex - 1
     }else{
         dex = +dex - +amt
+    }
+    if (dex < 0){
+        alert('Dexterity cannot be less than 1')
+        dex = 1;
     }
     mod = Math.floor((dex-10)/2)
     if(mod > -1){
@@ -420,6 +436,10 @@ function addCon (event){
     }else{
         con = +con + +amt
     }
+    if (con > 30){
+        alert('Constitution cannot be more than 30')
+        con = 30;
+    }
     mod = Math.floor((con-10)/2)
     if(mod > -1){
         mod = `+${mod}`
@@ -441,6 +461,10 @@ function subCon (event){
         con = +con - 1
     }else{
         con = +con - +amt
+    }
+    if (con < 0){
+        alert('Constitution cannot be less than 1')
+        con = 1;
     }
     mod = Math.floor((con-10)/2)
     if(mod > -1){
@@ -464,6 +488,10 @@ function addInt (event){
     }else{
         int = +int + +amt
     }
+    if (int > 30){
+        alert('Intelligence cannot be more than 30')
+        int = 30;
+    }
     mod = Math.floor((int-10)/2)
     if(mod > -1){
         mod = `+${mod}`
@@ -485,6 +513,10 @@ function subInt (event){
         int = +int - 1
     }else{
         int = +int - +amt
+    }
+    if (int < 0){
+        alert('Intelligence cannot be less than 1')
+        int = 1;
     }
     mod = Math.floor((int-10)/2)
     if(mod > -1){
@@ -508,6 +540,10 @@ function addwis (event){
     }else{
         wis = +wis + +amt
     }
+    if (wis > 30){
+        alert('Wisdom cannot be more than 30')
+        wis = 30;
+    }
     mod = Math.floor((wis-10)/2)
     if(mod > -1){
         mod = `+${mod}`
@@ -529,6 +565,10 @@ function subwis (event){
         wis = +wis - 1
     }else{
         wis = +wis - +amt
+    }
+    if (wis < 0){
+        alert('Wisdom cannot be less than 1')
+        wis = 1;
     }
     mod = Math.floor((wis-10)/2)
     if(mod > -1){
@@ -552,6 +592,10 @@ function addcha (event){
     }else{
         cha = +cha + +amt
     }
+    if (cha > 30){
+        alert('Charisma cannot be more than 30')
+        cha = 30;
+    }
     mod = Math.floor((cha-10)/2)
     if(mod > -1){
         mod = `+${mod}`
@@ -573,6 +617,10 @@ function subcha (event){
         cha = +cha - 1
     }else{
         cha = +cha - +amt
+    }
+    if (cha < 0){
+        alert('Charisma cannot be less than 1')
+        cha = 1;
     }
     mod = Math.floor((cha-10)/2)
     if(mod > -1){
