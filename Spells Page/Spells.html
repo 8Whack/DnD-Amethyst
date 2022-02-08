@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spells</title>
+    <link rel ='stylesheet' href = '/styles.css'>
+</head>
+<body id="spellsBody" >
+    <div id="title" class="center">
+        <h1>Spells</h1>
+    </div>
+    
+    <div id="main" class="row top">
+        <div id="results" class="column half">
+            <div id="spellSearchDiv" class="background">
+                <h3>Search for a Spell</h3>
+                <p>No symbols or spaces after the name, please. <br> If needed, just copy-paste the spell from the list on the right.</p>
+                <input id="spellSearchName" type="text" placeholder="Spell Name">
+                <button id="spellSearchBtn">Search</button>
+            </div>
+            <div id="searchResults Div" class =' background column'>
+                <h4>Results</h4>
+                <div id="searchResults">
+
+                </div>
+            </div>
+        </div>
+        <div id="allSpells" class = 'column'>
+            <div class="background column">
+                <button id="getAllSpells">Get All Spells</button>
+                <button id="clearSpells">Clear Spells</button>
+            </div>
+            <div id="spellsListDiv" class="background">
+                <p>Entire Spells List</p>
+                <ul id="spellsList">
+
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src='Spells.js'></script>
+</body>
+</html>
