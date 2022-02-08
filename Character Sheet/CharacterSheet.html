@@ -12,7 +12,7 @@
     <h1 class='center'>Character Sheet</h1>
     </div>
     <div id = 'topSection' class = 'center column'>
-        <div id = 'characterName' class = 'border'>
+        <div id = 'characterNameDiv' type='text' class = 'border'>
             <input id="characterName" placeholder = 'Name'>
         </div>  
         <div id ='characterInfo' class = 'border'>
@@ -21,7 +21,7 @@
             <input id = 'background' placeholder="Background">
             <input id = 'race' placeholder="Race">
             <input id = 'alignment' placeholder="Alignment">
-            <input id = 'experience' placeholder="Experience">
+            <input id = 'charExperience' placeholder="Experience">
         </div>
     </div>
     <div id='mainPage' >
@@ -92,147 +92,147 @@
         </div>
 
         <div id = 'column2' class = 'column'>
-            <div id = "inspiration" class = 'border center '>
+            <div id = "inspirationDiv" class = 'border center '>
                 <label>
-                    <input type='checkbox'>
+                    <input id='inspiration' type='checkbox'>
                     Inspiration
                 </label>
             </div>
-            <div id = 'proficiency' class = 'border center'>
+            <div id = 'proficiencyDiv' class = 'border center'>
                 <label>
-                    <input type="number" class ='skills'>
+                    <input id="proficiency" type="number" class ='skills'>
                     Proficiency Bonus
                 </label>
             </div>
-            <div id = 'passivePerception' class = 'border center'>
+            <div id = 'passivePerceptionDiv' class = 'border center'>
                 <label>
-                    <input type="number" class ='skills'>
+                    <input id="passivePerception" type="number" class ='skills'>
                     Passive Wisdom / Perception
                 </label>
             </div>
             <div id = "savingThrows" class ='column border'>
                 <h4 class = center>Saving Throws</h4>
                 <label id ='strSavThr'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="strSavProf" type = 'checkbox'>
+                    <input id="strSav" type='number' class ='skills'>
                     Strength
                 </label>
                 <label id = 'dexSavThr'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="dexSavProf" type = 'checkbox'>
+                    <input id="dexSav" type='number' class ='skills'>
                     Dexterity
                 </label>
                 <label id ='conSavThr'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="conSavProf" type = 'checkbox'>
+                    <input id="conSav" type='number' class ='skills'>
                     Constitution
                 </label>
                 <label id ='intSavThr'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="intSavProf" type = 'checkbox'>
+                    <input id="intSav" type='number' class ='skills'>
                     Intelligence
                 </label>
                 <label id ='wisSavThr'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="wisSavProf" type = 'checkbox'>
+                    <input id="wisSav" type='number' class ='skills'>
                     Wisdom
                 </label>
                 <label id ='chaSavThr'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="chaSavProf" type = 'checkbox'>
+                    <input id="chaSav" type='number' class ='skills'>
                     Charisma
                 </label>
             </div>
             <div id = 'skills' class = 'column border'>
                 <h4 class = 'center'>Skills</h4>
                 <label id ='acrobatics'>
-                    <input type = 'checkbox' size = '25'>
-                    <input type='number' class ='skills'>
+                    <input id="acroProf" type = 'checkbox' size = '25'>
+                    <input id="acro" type='number' class ='skills'>
                     Acrobatics (Dex)
                 </label>
                 <label id ='animalHandling'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="AHProf" type = 'checkbox'>
+                    <input id="AH" type='number' class ='skills'>
                     Animal Handling (Wis)
                 </label>
                 <label id ='Arcana'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="arcProf" type = 'checkbox'>
+                    <input id="arc" type='number' class ='skills'>
                     Arcana (Int)
                 </label>
                 <label id ='athletics'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="athProf" type = 'checkbox'>
+                    <input id='ath' type='number' class ='skills'>
                     Athletics (Str)
                 </label>
                 <label id ='deception'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="decProf" type = 'checkbox'>
+                    <input id="dec" type='number' class ='skills'>
                     Deception (Cha)
                 </label>
                 <label id ='history'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="hisProf" type='checkbox'>
+                    <input id="his" type='number' class ='skills'>
                     History (Int)
                 </label>
                 <label id ='insight'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="insProf" type = 'checkbox'>
+                    <input id="ins" type='number' class ='skills'>
                     Insight (Wis)
                 </label>
                 <label id ='intimidation'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="intProf" type = 'checkbox'>
+                    <input id="int" type='number' class ='skills'>
                     Intimidation (Cha)
                 </label>
                 <label id ='investigation'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="invProf" type = 'checkbox'>
+                    <input id="inv" type='number' class ='skills'>
                     Investigation (Int)
                 </label>
                 <label id ='medicine'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="medProf" type = 'checkbox'>
+                    <input id="med" type='number' class ='skills'>
                     Medicine (Wis)
                 </label>
                 <label id ='nature'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="natProf" type = 'checkbox'>
+                    <input id="nat" type='number' class ='skills'>
                     Nature (Int)
                 </label>
                 <label id ='perception'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="percProf" type = 'checkbox'>
+                    <input id="perc" type='number' class ='skills'>
                     Perception (Wis)
                 </label>
                 <label id ='performance'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="perfProf" type = 'checkbox'>
+                    <input id="perf" type='number' class ='skills'>
                     Performance (Cha)
                 </label>
                 <label id ='persuasion'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="persProf" type = 'checkbox'>
+                    <input id="pers" type='number' class ='skills'>
                     Persuasion (Cha)
                 </label>
                 <label id ='religion'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="relProf" type = 'checkbox'>
+                    <input id="rel" type='number' class ='skills'>
                     Religion (Int)
                 </label>
                 <label id ='slightOfHand'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="sliProf" type = 'checkbox'>
+                    <input id="sli" type='number' class ='skills'>
                     Slight of Hand (Dex)
                 </label>
                 <label id ='stealth'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="steProf" type = 'checkbox'>
+                    <input id="ste" type='number' class ='skills'>
                     Stealth (Dex)
                 </label>
                 <label id ='survival'>
-                    <input type = 'checkbox'>
-                    <input type='number' class ='skills'>
+                    <input id="surProf" type = 'checkbox'>
+                    <input id="sur" type='number' class ='skills'>
                     Survival (Wis)
                 </label>
             </div>
@@ -312,15 +312,15 @@
                     <h4>Death Saves</h4>
                     <label>
                         Sucesses
-                        <input type="checkbox">
-                        <input type="checkbox">
-                        <input type="checkbox">
+                        <input id="suc1" type="checkbox">
+                        <input id="suc2" type="checkbox">
+                        <input id="suc3" type="checkbox">
                     </label>
                     <label>
                         Failures
-                        <input type="checkbox">
-                        <input type="checkbox">
-                        <input type="checkbox">
+                        <input id="fail1" type="checkbox">
+                        <input id="fail2" type="checkbox">
+                        <input id="fail3" type="checkbox">
                     </label>
                 </div>
             </div>
@@ -413,8 +413,10 @@
         </div> 
     </div>  
     <div id = 'bottomSection' class = 'center'>
-
-       
+        <div id="save/load">
+        <button id="saveCharacter">Save Current Sheet</button>
+        <button id="loadRandom">Load a Random Character</button>
+        </div>  
         
     </div>
 
