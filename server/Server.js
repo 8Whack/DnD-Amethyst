@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
+<<<<<<< HEAD
 // require('dotenv').config();
 // const {CONNECTION_STRING} = process.env;
 // const Sequelize = require('sequelize');
@@ -129,6 +130,14 @@ savedChar = [{
   }]
 
 app.post('/api/save/', (req, res)=>{
+=======
+app.use(cors());
+app.use(express.json());
+
+savedChar= []
+
+app.post('/api/save', (req, res)=>{
+>>>>>>> 41871d6ac7edb82cf2eca594723326774c7120df
     console.log(req.body)
     savedChar.push(req.body)
     console.log(savedChar)
@@ -136,12 +145,17 @@ app.post('/api/save/', (req, res)=>{
     })
 
 
+<<<<<<< HEAD
 app.get('/api/example/', (req, res)=>{
+=======
+app.get('/api/example', (req, res)=>{
+>>>>>>> 41871d6ac7edb82cf2eca594723326774c7120df
     let randomIndex = Math.floor(Math.random() * savedChar.length);
   let randomChar = savedChar[randomIndex];
     res.status(200).send(randomChar)
 })
 
+<<<<<<< HEAD
 // app.post('/seed', ()=>{
 //     sequelize.query(`
             
@@ -157,4 +171,6 @@ app.get('/api/example/', (req, res)=>{
 
 
 
+=======
+>>>>>>> 41871d6ac7edb82cf2eca594723326774c7120df
 app.listen(4000, ()=> console.log('server running on 4000'))
