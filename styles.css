@@ -92,6 +92,12 @@
     border-color: black;
 }
 
+.right{
+    color: blue;
+    
+
+}
+
 #characterSheetBody {
     padding: 50px;
     margin: 50px;

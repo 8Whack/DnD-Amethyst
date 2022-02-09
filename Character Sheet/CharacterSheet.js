@@ -1,10 +1,21 @@
 //let {addPersonalityTrait} = require('./Functions.js')
 
+function deleteElement(e){
+    e.preventDefault()
+    e.target.parentNode.remove()
+}
 
 function addPersonalityTrait (event){
     event.preventDefault();
     newPersonality = document.createElement('li')
     newPersonality.textContent = document.getElementById('inputPersonality').value
+
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'X'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newPersonality.prepend(deleteBtn)
+
     document.getElementById('personalityList').appendChild(newPersonality);
     document.getElementById('inputPersonality').value = ''
 }
@@ -626,7 +637,7 @@ function saveCharacter(e){
     
     let charObj = {
         name: document.getElementById('characterName').value,
-        class: document.getElementById('classAndLevel').value,
+        charClass: document.getElementById('classAndLevel').value,
         background: document.getElementById('background').value,
         race: document.getElementById('race').value,
         alignment: document.getElementById('alignment').value,
@@ -637,6 +648,12 @@ function saveCharacter(e){
         int: document.getElementById('intDisplay').innerHTML,
         wis: document.getElementById('wisDisplay').innerHTML,
         cha: document.getElementById('chaDisplay').innerHTML,
+        strMod: document.getElementById('strMod').innerHTML,
+        dexMod: document.getElementById('dexMod').innerHTML,
+        conMod: document.getElementById('conMod').innerHTML,
+        intMod: document.getElementById('intMod').innerHTML,
+        wisMod: document.getElementById('wisMod').innerHTML,
+        chaMod: document.getElementById('chaMod').innerHTML,
         insp: document.getElementById('inspiration').checked,
         prof: document.getElementById('proficiency').value,
         passPercept: document.getElementById('passivePerception').value,
@@ -677,7 +694,7 @@ function saveCharacter(e){
         dec: document.getElementById('dec').value,
         his: document.getElementById('his').value,
         ins: document.getElementById('ins').value,
-        int: document.getElementById('int').value,
+        intel: document.getElementById('int').value,
         inv: document.getElementById('inv').value,
         med: document.getElementById('med').value,
         nat: document.getElementById('nat').value,
@@ -712,6 +729,117 @@ function saveCharacter(e){
 
     }
     console.log(charObj)
+    axios.post('http://localhost:4000/api/save/', charObj)
+    .then((res)=>{
+        console.log(res.data)
+    })
+    .catch(err=>console.log(err))
 }
 
 document.getElementById('saveCharacter').addEventListener('click', saveCharacter)
+
+function loadChar(e){
+    e.preventDefault()
+    axios.get('http://localhost:4000/api/example/')
+    .then((res)=>{
+        console.log(res.data)
+
+        let {name, charClass, background,race,alignment,experience,str,dex,con,int,wis,cha,strMod,dexMod,conMod,intMod,wisMod,chaMod,insp,prof,passPercept,strSavProf,dexSavProf,conSavProf,intSavProf,wisSavProf,chaSavProf,strSav,dexSav,conSav,intSav,wisSav,chaSav,acroProf,AHProf,arcProf,athProf,decProf,hisProf,insProf,intProf,invProf, medProf,natProf,percProf,perfProf,persProf,relProf,sliProf,steProf,surProf,acro,AH,arc,ath,dec,his,ins, intel ,inv,med,nat,perc,perf,pers,rel,sli,ste,sur,armor,init,speed,hp,tempHP,hitDice,suc1,suc2,suc3,fail1,fail2,fail3,attacks,spells,equipment,personality,ideals,bonds,flaws,profAndLang,featAndTrait} = res.data
+
+        document.getElementById('characterName').value= name;
+        document.getElementById('classAndLevel').value= charClass
+        document.getElementById('background').value= background
+        document.getElementById('race').value= race;
+        document.getElementById('alignment').value=alignment; 
+        document.getElementById('charExperience').value= experience;
+        document.getElementById('strDisplay').innerHTML= str;
+        document.getElementById('dexDisplay').innerHTML= dex;
+        document.getElementById('conDisplay').innerHTML= con;
+        document.getElementById('intDisplay').innerHTML= int;
+        document.getElementById('wisDisplay').innerHTML= wis;
+        document.getElementById('chaDisplay').innerHTML= cha;
+        document.getElementById('strMod').innerHTML= strMod;
+        document.getElementById('dexMod').innerHTML= dexMod;
+        document.getElementById('conMod').innerHTML= conMod;
+        document.getElementById('intMod').innerHTML= intMod;
+        document.getElementById('wisMod').innerHTML= wisMod;
+        document.getElementById('chaMod').innerHTML= chaMod;
+        document.getElementById('inspiration').checked= insp;
+        document.getElementById('proficiency').value= prof;
+        document.getElementById('passivePerception').value= passPercept; 
+        document.getElementById('strSavProf').checked=strSavProf; 
+        document.getElementById('dexSavProf').checked= dexSavProf;
+        document.getElementById('conSavProf').checked= conSavProf;
+        document.getElementById('intSavProf').checked= intSavProf;
+        document.getElementById('wisSavProf').checked= wisSavProf;
+        document.getElementById('chaSavProf').checked= chaSavProf;
+        document.getElementById('strSav').value= strSav
+        document.getElementById('dexSav').value= dexSav
+        document.getElementById('conSav').value= conSav
+        document.getElementById('intSav').value= intSav
+        document.getElementById('wisSav').value= wisSav
+        document.getElementById('chaSav').value= chaSav
+        document.getElementById('acroProf').checked= acroProf
+        document.getElementById('AHProf').checked= AHProf
+        document.getElementById('arcProf').checked= arcProf
+        document.getElementById('athProf').checked= athProf
+        document.getElementById('decProf').checked= decProf
+        document.getElementById('hisProf').checked= hisProf
+        document.getElementById('insProf').checked= insProf
+        document.getElementById('intProf').checked= intProf
+        document.getElementById('invProf').checked= invProf
+        document.getElementById('medProf').checked= medProf
+        document.getElementById('natProf').checked= natProf
+        document.getElementById('percProf').checked= percProf
+        document.getElementById('perfProf').checked= perfProf
+        document.getElementById('persProf').checked= persProf
+        document.getElementById('relProf').checked= relProf
+        document.getElementById('sliProf').checked= sliProf
+        document.getElementById('steProf').checked= steProf
+        document.getElementById('surProf').checked= surProf
+        document.getElementById('acro').value= acro
+        document.getElementById('AH').value= AH
+        document.getElementById('arc').value= arc
+        document.getElementById('ath').value= ath
+        document.getElementById('dec').value= dec
+        document.getElementById('his').value= his
+        document.getElementById('ins').value= ins
+        document.getElementById('int').value= intel
+        document.getElementById('inv').value= inv
+        document.getElementById('med').value= med
+        document.getElementById('nat').value= nat
+        document.getElementById('perc').value= perc
+        document.getElementById('perf').value= perf
+        document.getElementById('pers').value= pers
+        document.getElementById('rel').value= rel
+        document.getElementById('sli').value= sli
+        document.getElementById('ste').value= ste
+        document.getElementById('sur').value= sur
+        document.getElementById('armor').innerHTML=armor 
+        document.getElementById('init').innerHTML= init
+        document.getElementById('speed').innerHTML= speed
+        document.getElementById('hp').innerHTML= hp
+        document.getElementById('tempHP').innerHTML= tempHP
+        document.getElementById('hitDice').innerHTML= hitDice
+        document.getElementById('suc1').checked= suc1
+        document.getElementById('suc2').checked= suc2
+        document.getElementById('suc3').checked= suc3
+        document.getElementById('fail1').checked= fail1
+        document.getElementById('fail2').checked= fail2
+        document.getElementById('fail3').checked= fail3
+        document.getElementById('attackList').innerHTML= attacks
+        document.getElementById('spellsList').innerHTML= spells
+        document.getElementById('equipmentList').innerHTML= equipment
+        document.getElementById('personalityList').innerHTML= personality
+        document.getElementById('idealList').innerHTML= ideals
+        document.getElementById('bondList').innerHTML= bonds
+        document.getElementById('flawList').innerHTML= flaws
+        document.getElementById('profAndLangList').innerHTML=profAndLang 
+        document.getElementById('featAndTraitList').innerHTML= featAndTrait
+
+
+    })
+    .catch(err=> console.log(err))
+}
+
+document.getElementById('loadRandom').addEventListener('click', loadChar)
