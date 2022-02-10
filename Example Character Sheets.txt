@@ -120,3 +120,117 @@ chaSavProf: false
       '                <li>Hellish Resistance</li><li>Infernal Legacy</li><li>Darkvision</li>'
   }
 
+-----
+{
+    name: 'Xyndr Qsp',
+    charClass: 'Level 3 Warlock',
+    background: 'Urchin',
+    race: 'Male Satyr',
+    alignment: 'Chaotic Evil',
+    experience: '1200',
+    str: '13',
+    dex: '15',
+    con: '12',
+    int: '8',
+    wis: '10',
+    cha: '17',
+    strMod: '+1',
+    dexMod: '+2',
+    conMod: '+1',
+    intMod: '-1',
+    wisMod: '+0',
+    chaMod: '+3',
+    insp: false,
+    prof: '2',
+    passPercept: '10',
+    strSavProf: false,
+    dexSavProf: false,
+    conSavProf: false,
+    intSavProf: false,
+    wisSavProf: true,
+    chaSavProf: true,
+    strSav: '1',
+    dexSav: '2',
+    conSav: '1',
+    intSav: '-1',
+    wisSav: '1',
+    chaSav: '5',
+    acroProf: true,
+    AHProf: false,
+    arcProf: true,
+    athProf: false,
+    decProf: true,
+    hisProf: false,
+    insProf: false,
+    intProf: true,
+    invProf: false,
+    medProf: false,
+    natProf: false,
+    percProf: false,
+    perfProf: true,
+    persProf: true,
+    relProf: false,
+    sliProf: false,
+    steProf: false,
+    surProf: false,
+    acro: '4',
+    AH: '0',
+    arc: '1',
+    ath: '1',
+    dec: '5',
+    his: '-1',
+    ins: '0',
+    intel: '5',
+    inv: '-1',
+    med: '0',
+    nat: '-1',
+    perc: '0',
+    perf: '5',
+    pers: '5',
+    rel: '-1',
+    sli: '2',
+    ste: '2',
+    sur: '0',
+    armor: '17',
+    init: '2',
+    speed: '35',
+    hp: '21',
+    tempHP: '0',
+    hitDice: '3 d8',
+    suc1: true,
+    suc2: false,
+    suc3: false,
+    fail1: true,
+    fail2: true,
+    fail3: true,
+    attacks: '\n' +
+      '                    \n' +
+      '                <li class="static"><button class="right">x</button>Rapier: Hit/DC = +5, Damage = 1d8+3</li><li class="static"><button class="right">x</button>Dagger: Hit/DC = +4, Damage = 1d4+2</li><li class="static"><button class="right">x</button>Boomerang: Hit/DC = +4, Damage = 1d4+2</li>',
+    spells: '\n' +
+      '                   \n' +
+      '                <li class="static"><button class="right">x</button>Armor of Shadows: Max Level: 1 </li><li class="static"><button class="right">x</button>Eldritch Blast: Max 
+Level: Cantrip</li><li class="static"><button class="right">x</button>Branding Smite: Max Level: 2<input type="checkbox"><input type="checkbox"></li><li class="static"><button class="right">x</button>Hellish Rebuke: Max Level: 1<input type="checkbox"><input type="checkbox"></li><li class="static"><button class="right">x</button>Shatter: Max Level: 2<input type="checkbox"><input type="checkbox"></li><li class="static"><button class="right">x</button>Shield: Max Level: 1<input type="checkbox"><input type="checkbox"></li><li class="static"><button class="right">x</button>Chill Touch: Max Level: Cantrip</li>',
+    equipment: '\n' +
+      '                    \n' +
+      '                <li class="static"><button class="right">x</button><input class="skills" type="number">Boomerang</li><li class="static"><button class="right">x</button><input class="skills" type="number">Crossbow</li><li class="static"><button class="right">x</button><input class="skills" type="number">Dagger</li><li class="static"><button class="right">x</button><input class="skills" type="number">Hammer</li><li class="static"><button class="right">x</button><input class="skills" type="number">Piton</li><li class="static"><button class="right">x</button><input class="skills" type="number">Rope</li><li class="static"><button class="right">x</button><input class="skills" type="number">Tinder Box</li><li class="static"><button class="right">x</button><input class="skills" type="number">Waterskin</li><li class="static"><button class="right">x</button><input class="skills" type="number">Leather Armor</li><li class="static"><button class="right">x</button><input class="skills" type="number">Rapier</li>',
+    personality: '\n' +
+      '                    \n' +
+      '                <li class="static">Depressed<button class="right">x</button></li><li class="static">Loner<button class="right">x</button></li><li class="static">Desperate<button class="right">x</button></li><li class="static">Motivated<button class="right">x</button></li>',
+    ideals: '\n' +
+      '                    \n' +
+      '                <li class="static"><button class="right">x</button>All for One</li>',
+    bonds: '\n' +
+      '                    \n' +
+      '                <li class="static"><button class="right">x</button>Patron-Sworn</li>',
+    flaws: '\n' +
+      '                    \n' +
+      '                <li class="static"><button class="right">x</button>Too Many to List</li>',
+    profAndLang: '\n' +
+      '                    \n' +
+      '                <li class="static"><button class="right">x</button>Abyssal</li><li class="static"><button class="right">x</button>Infernal</li><li class="static"><button class="right">x</button>Light and Medium Armor</li><li class="static"><button class="right">x</button>Shields</li><li class="static"><button class="right">x</button>Martial and Simple Weapons</li><li class="static"><button class="right">x</button>Disguise Kit</li><li class="static"><button class="right">x</button>Pan Flute</li><li class="static"><button class="rg 
+ht">x</button>Sylvan</li>',
+    featAndTrait: '\n' +
+      '                    \n' +
+      `                <li class="static"><button class="right">x</button>Hexblade's Curse</li><li class="static"><button class="right">x</button>Hex Warrior</li><li class="static"><button class="right">x</button>Eldritch Invocations</li><li class="static"><button class="right">x</button>Fey</li><li class="static"><button class="right">x</button>Magic Resistance</li><li class="static"><button class="right">x</button>Mirthful Leaps</li><li class="static"><button class="right">x</button>Reveler</li>`
+  }
+

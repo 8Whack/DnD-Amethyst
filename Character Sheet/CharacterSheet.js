@@ -9,12 +9,12 @@ function addPersonalityTrait (event){
     event.preventDefault();
     newPersonality = document.createElement('li')
     newPersonality.textContent = document.getElementById('inputPersonality').value
-
+    newPersonality.classList.add('static')
     let deleteBtn = document.createElement('button')
-    deleteBtn.textContent = 'X'
+    deleteBtn.textContent = 'x'
     deleteBtn.classList.add('right')
     deleteBtn.addEventListener('click', deleteElement)
-    newPersonality.prepend(deleteBtn)
+    newPersonality.appendChild(deleteBtn)
 
     document.getElementById('personalityList').appendChild(newPersonality);
     document.getElementById('inputPersonality').value = ''
@@ -27,6 +27,13 @@ function addIdeal (event){
     event.preventDefault();
     newIdeal = document.createElement('li')
     newIdeal.textContent = document.getElementById('inputIdeal').value
+    newIdeal.classList.add('static')
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newIdeal.prepend(deleteBtn)
+
     document.getElementById('idealList').appendChild(newIdeal);
     document.getElementById('inputIdeal').value = ''
 }
@@ -37,6 +44,13 @@ function addBond (event){
     event.preventDefault();
     newBond = document.createElement('li')
     newBond.textContent = document.getElementById('inputBond').value
+    newBond.classList.add('static')
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newBond.prepend(deleteBtn)
+
     document.getElementById('bondList').appendChild(newBond);
     document.getElementById('inputBond').value = ''
 }
@@ -47,6 +61,13 @@ function addFlaw (event){
     event.preventDefault();
     newFlaw = document.createElement('li')
     newFlaw.textContent = document.getElementById('inputFlaw').value
+    newFlaw.classList.add('static')
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newFlaw.prepend(deleteBtn)
+
     document.getElementById('flawList').appendChild(newFlaw);
     document.getElementById('inputFlaw').value = ''
 }
@@ -57,6 +78,13 @@ function addProfAndLang (event){
     event.preventDefault();
     newProf = document.createElement('li')
     newProf.textContent = document.getElementById('inputProfAndLang').value
+    newProf.classList.add('static')
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newProf.prepend(deleteBtn)
+
     document.getElementById('profAndLangList').appendChild(newProf);
     document.getElementById('inputProfAndLang').value = ''
 }
@@ -67,6 +95,13 @@ function addFeatAndTrait (event){
     event.preventDefault();
     newFeat = document.createElement('li')
     newFeat.textContent = document.getElementById('inputFeatAndTrait').value
+    newFeat.classList.add('static')
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newFeat.prepend(deleteBtn)
+
     document.getElementById('featAndTraitList').appendChild(newFeat);
     document.getElementById('inputFeatAndTrait').value = ''
 }
@@ -78,12 +113,18 @@ function addEquipment (event){
     newEquip = document.createElement('li')
     newEquip.textContent = document.getElementById('inputEquipment').value
     document.getElementById('equipmentList').appendChild(newEquip);
-
+    newEquip.classList.add('static')
     newQty = document.createElement('input')
     newQty.classList.add('skills')
     newQty.type = 'number'
     newQty.value = document.getElementById('qtyEquipment').value;
     newEquip.prepend(newQty)
+
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newEquip.prepend(deleteBtn)
 
     document.getElementById('inputEquipment').value = ''
     document.getElementById('qtyEquipment').value = ''
@@ -98,6 +139,12 @@ function addAttack (event){
     attackBonus = document.getElementById('attackBonus').value;
     damage = document.getElementById('damage').value;
     newAttack.textContent = `${attackName}: Hit/DC = ${attackBonus}, Damage = ${damage}`
+    newAttack.classList.add('static')
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newAttack.prepend(deleteBtn)
 
     document.getElementById('attackList').appendChild(newAttack)
 
@@ -114,7 +161,7 @@ function addSpell (event){
     spellName = document.getElementById('spellName').value;
     level = document.getElementById('spellLevel').value;
     newSpell.textContent = `${spellName}: Max Level: ${level}`
-    
+    newSpell.classList.add('static')
     uses = +document.getElementById('spellUses').value;
     console.log(uses)
     for(i=0; i< uses; i++){
@@ -122,6 +169,12 @@ function addSpell (event){
         use.type ='checkbox'
         newSpell.appendChild(use)
     }
+
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'x'
+    deleteBtn.classList.add('right')
+    deleteBtn.addEventListener('click', deleteElement)
+    newSpell.prepend(deleteBtn)
 
     document.getElementById('spellsList').appendChild(newSpell)
 

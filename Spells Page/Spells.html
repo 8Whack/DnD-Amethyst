@@ -8,11 +8,25 @@
     <link rel ='stylesheet' href = '/styles.css'>
 </head>
 <body id="spellsBody" >
-    <div id="title" class="center">
-        <h1>Spells</h1>
+    <h1 id="title">Spells</h1>
+    <div class = 'navbar '>
+        <div class = 'dropdown'>
+            
+            <button class="dropbtn">Menu
+            <i class = 'fa fa-caret-down'></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/Character Sheet/CharacterSheet.html">Character Sheet</a>
+                    <a href="/Spells Page/Spells.html">Spells</a>
+            </div>
+        </div>
     </div>
     
+    <div id="spellSheetBody">
+        
+    
     <div id="main" class="row top">
+        
         <div id="results" class="column half">
             <div id="spellSearchDiv" class="background">
                 <h3>Search for a Spell</h3>
@@ -42,6 +56,7 @@
         </div>
         
     </div>
+</div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src='Spells.js'></script>

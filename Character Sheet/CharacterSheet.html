@@ -7,10 +7,25 @@
     <title>Character Sheet</title>
     <link rel ='stylesheet' href = '/styles.css'>
 </head>
-<body id="characterSheetBody" class = 'center column'>
-    <div id="title">
-    <h1 class='center'>Character Sheet</h1>
-    </div>
+<body id="charBody">
+    <h1 id="title">Character Sheet</h1>
+        <div class = 'navbar'>
+            <div class = 'dropdown'>
+                <button class="dropbtn">Menu
+                <i class='fa fa-caret-down'></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Character Sheet/CharacterSheet.html">Character Sheet</a>
+                    <a href="/Spells Page/Spells.html">Spells</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    <div id="characterSheetBody" class = 'center column'>
+    
     <div id = 'topSection' class = 'center column'>
         <div id = 'characterNameDiv' type='text' class = 'border'>
             <input id="characterName" placeholder = 'Name'>
@@ -419,6 +434,7 @@
         </div>  
         
     </div>
+</div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="CharacterSheet.js"></script>
