@@ -7,8 +7,8 @@
     <title>Spells</title>
     <link rel ='stylesheet' href = '/styles.css'>
 </head>
-<body id="spellsBody" >
-    <h1 id="title">Spells</h1>
+<body id="monstersBody" >
+    <h1 id="title">Monsters</h1>
     <div class = 'navbar '>
         <div class = 'dropdown'>
             
@@ -23,17 +23,17 @@
         </div>
     </div>
     
-    <div id="spellSheetBody">
+    <div id="monsterSheetBody">
         
     
     <div id="main" class="row top">
         
         <div id="results" class="column half">
-            <div id="spellSearchDiv" class="background">
-                <h3>Search for a Spell</h3>
-                <p>No symbols, or spaces after the name, please. <br> If needed, just copy-paste the spell from the list on the right.</p>
-                <input id="spellSearchName" type="text" placeholder="Spell Name">
-                <button id="spellSearchBtn">Search</button>
+            <div id="monsterSearchDiv" class="background">
+                <h3>Search for a Monster</h3>
+                <p>No symbols, or spaces after the name, please. <br> If needed, just copy-paste the monster from the list on the right.</p>
+                <input id="monsterSearchName" type="text" placeholder="Monster Name">
+                <button id="monsterSearchBtn">Search</button>
             </div>
             <div id="searchResults Div" class =' background column'>
                 <h4>Results</h4>
@@ -42,15 +42,15 @@
                 </div>
             </div>
         </div>
-        <div id="allSpells" class = 'column'>
+        <div id="allmonsters" class = 'column'>
             <div class="background column">
-                <button id="getAllSpells">Get All Spells</button>
-                <button id="clearSpells">Clear Spells</button>
+                <button id="getAllMonsters">Get All Monsters</button>
+                <button id="clearMonsters">Clear Monsters</button>
             </div>
             <div  class="background">
-                <p>Entire Spells List</p>
+                <p>Entire Monsters List</p>
                 <div id="listDiv">
-                <ul id="spellsList">
+                <ul id="monstersList">
 
                 </ul>
                 </div>
@@ -62,6 +62,6 @@
 </div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
-    <script src='Spells.js'></script>
+    <script src='monsters.js'></script>
 </body>
 </html>

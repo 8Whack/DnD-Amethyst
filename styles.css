@@ -122,6 +122,11 @@
     
 }
 
+#monstersBody {
+    background-image: url('wp7209112-fantasy-computer-wallpapers.jpg');
+    background-size: cover;
+}
+
 #spellSheetBody{
     padding: 0px;
     margin: 0px;
@@ -156,7 +161,7 @@
 
 }
 
-#spellsListDiv{
+#listDiv{
     max-height: 70vh;
     display: block;
     overflow: auto;
