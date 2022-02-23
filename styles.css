@@ -156,6 +156,13 @@
 
 }
 
+#spellsListDiv{
+    max-height: 70vh;
+    display: block;
+    overflow: auto;
+}
+
+
 /* Navbar container */
 .navbar {
     overflow: hidden;

@@ -1,0 +1,10 @@
+MVP for Capstone 2
+
+Add in class & race functionality for the character builder- where it autocompletes your ability scores based on class, level, and race.
+
+Add login and character storing in a mongo database.
+
+Add monsters (and everything else) pages, structured like the spells page
+
+Add a Map function that lets a DM control combat in a digital space.
+
