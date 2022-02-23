@@ -1,7 +1,4 @@
-
-
-function getAllSpells(e){
-    axios.get('https://www.dnd5eapi.co/api/spells')
+axios.get('https://www.dnd5eapi.co/api/spells')
     .then((res)=>{
         console.log(res)
         for(i=0; i< res.data.count; i++){
@@ -13,21 +10,14 @@ function getAllSpells(e){
     .catch((err)=>{
         console.log('Error getting spells')
     })
-}
 
-document.getElementById('getAllSpells').addEventListener('click', getAllSpells)
 
-function clearSpells(e){
-
-    document.getElementById('spellsList').innerHTML=''
-}
-
-document.getElementById('clearSpells').addEventListener('click', clearSpells)
 
 function spellSearch(e){
     spellName = document.getElementById('spellSearchName').value;
     spellName = spellName.toLowerCase()
-    spellName = spellName.replace(/[^a-z]/g, ' ')
+    spellName = spellName.replace(/[^a-z, ']/g, ' ')
+    spellName = spellName.replace(/[']/g, '')
     arr = spellName.split(' ')
     spellName = arr.join('-')
     console.log(spellName)

@@ -1,6 +1,4 @@
-
-function getAllMonsters(e){
-    axios.get('https://www.dnd5eapi.co/api/monsters/')
+axios.get('https://www.dnd5eapi.co/api/monsters/')
     .then((res)=>{
         console.log(res)
         for(i=0; i< res.data.count; i++){
@@ -12,16 +10,7 @@ function getAllMonsters(e){
     .catch((err)=>{
         console.log('Error getting spells' +  err)
     })
-}
 
-document.getElementById('getAllMonsters').addEventListener('click', getAllMonsters)
-
-function clearMonsters(e){
-
-    document.getElementById('monstersList').innerHTML=''
-}
-
-document.getElementById('clearMonsters').addEventListener('click', clearMonsters)
 
 function monsterSearch(e){
     monsterName = document.getElementById('monsterSearchName').value;
@@ -166,7 +155,7 @@ function monsterSearch(e){
         console.log(err)
         alert('Spell not found. Check spelling.')
     })
-    document.getElementById('spellSearchName').value = ''
+    document.getElementById('monsterSearchName').value = ''
 }
 
 document.getElementById('monsterSearchBtn').addEventListener('click', monsterSearch)
