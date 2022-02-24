@@ -115,8 +115,12 @@
     
 }
 
+#homeBody{
+    background-image: url('wp7209062-fantasy-computer-wallpapers.jpg');
+    background-size: cover;
+}
+
 #spellsBody {
-    
     background-image: url('wp5619846-fantasy-computer-wallpapers.jpg');
     background-size: cover;
     

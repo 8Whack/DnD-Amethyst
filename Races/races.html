@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spells</title>
-    <link rel ='stylesheet' href = '/styles.css'>
+    <title>Races</title>
+    <link rel ='stylesheet' href = 'styles.css'>
 </head>
-<body id="spellsBody" >
-    <h1 id="title">Spells</h1>
+<body id="racesBody" >
+    <h1 id="title">Races</h1>
     <div class = 'navbar '>
         <div class = 'dropdown'>
             
@@ -16,6 +16,7 @@
             <i class = 'fa fa-caret-down'></i>
             </button>
             <div class="dropdown-content">
+                <a href="/index.html">Home</a>
                 <a href="/Character Sheet/CharacterSheet.html">Character Sheet</a>
                     <a href="/Spells Page/Spells.html">Spells</a>
                     <a href="/Monsters Page/monsters.html">Monsters</a>
@@ -24,17 +25,17 @@
         </div>
     </div>
     
-    <div id="spellSheetBody">
+    <div id="raceSheetBody">
         
     
     <div id="main" class="row top">
         
         <div id="results" class="column half">
-            <div id="spellSearchDiv" class="background">
-                <h3>Search for a Spell</h3>
-                <p>No symbols, or spaces after the name, please. <br> If needed, just copy-paste the spell from the list on the right.</p>
-                <input id="spellSearchName" type="text" placeholder="Spell Name">
-                <button id="spellSearchBtn">Search</button>
+            <div id="raceSearchDiv" class="background">
+                <h3>Search for a Race</h3>
+                <p>No symbols, or spaces after the name, please. <br> If needed, just copy-paste the race from the list on the right.<br> **PLEASE NOTE: Search results are currently disabled.**</p>
+                <input id="raceSearchName" type="text" placeholder="Race Name">
+                <button id="raceSearchBtn">Search</button>
             </div>
             <div id="searchResults Div" class =' background column'>
                 <h4>Results</h4>
@@ -43,11 +44,11 @@
                 </div>
             </div>
         </div>
-        <div id="allSpells" class = 'column'>
+        <div id="allraces" class = 'column'>
             <div  class="background">
-                <h3>List of Spells</h3>
+                <h3>List of Races</h3>
                 <div id="listDiv">
-                <ul id="spellsList">
+                <ul id="racesList">
 
                 </ul>
                 </div>
@@ -59,6 +60,6 @@
 </div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
-    <script src='Spells.js'></script>
+    <script src='races.js'></script>
 </body>
 </html>
