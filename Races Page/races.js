@@ -1,36 +1,34 @@
-axios.get('https://www.dnd5eapi.co/api/spells')
+axios.get('https://www.dnd5eapi.co/api/races/')
     .then((res)=>{
         console.log(res)
         for(i=0; i< res.data.count; i++){
-            newSpell = document.createElement('li');
-            newSpell.textContent = res.data.results[i].name;
-            document.getElementById('spellsList').appendChild(newSpell)
+            newRace = document.createElement('li');
+            newRace.textContent = res.data.results[i].name;
+            document.getElementById('racesList').appendChild(newRace)
         }
     })
     .catch((err)=>{
-        console.log('Error getting spells')
+        console.log('Error getting races' +  err)
     })
 
 
-
-function spellSearch(e){
-    spellName = document.getElementById('spellSearchName').value;
-    spellName = spellName.toLowerCase()
-    spellName = spellName.replace(/[^a-z, ']/g, ' ')
-    spellName = spellName.replace(/[']/g, '')
-    arr = spellName.split(' ')
-    spellName = arr.join('-')
-    console.log(spellName)
-    axios.get(`https://www.dnd5eapi.co/api/spells/${spellName}`)
+function raceSearch(e){
+    raceName = document.getElementById('raceSearchName').value;
+    raceName = raceName.toLowerCase()
+    raceName = raceName.replace(/[^a-z]/g, ' ')
+    arr = raceName.split(' ')
+    raceName = arr.join('-')
+    console.log(raceName)
+    axios.get(`https://www.dnd5eapi.co/api/races/${raceName}`)
     .then((res)=>{
         document.getElementById('searchResults').innerHTML = ''
         console.log(res)
-        let {name, attack_type, casting_time, components, concentration, damage, desc, duration, higher_level, level, material, range, ritual, school, area_of_effect} = res.data;
+        let {name, speed, ability_bonuses, alignment, age, size, size_description, starting_proficiencies, starting_proficiency_options, languages, languages_desc, traits, subraces} = res.data;
         
-        console.log(name, attack_type, casting_time, components, concentration, damage, desc, duration, higher_level, level, material, range, ritual, school)
+        console.log(name, speed, ability_bonuses, alignment, age, size, size_description, starting_proficiencies, starting_proficiency_options, languages, languages_desc, traits, subraces)
 
-        let spellName = document.createElement('h3')
-        spellName.innerHTML = name
+        let raceName = document.createElement('h3')
+        raceName.innerHTML = name
         
         let atkType = document.createElement('p');
         atkType.innerHTML = `Attack Type: ${attack_type}`
@@ -77,7 +75,7 @@ function spellSearch(e){
         highLvl.innerHTML = `At Higher Levels: ${higher_level}`
 
         let lvl = document.createElement('p')
-        lvl.innerHTML = `Base Level: ${level}`
+        lvl.innerHTML = `Level: ${level}`
 
         let mat = document.createElement('p')
         mat. innerHTML= `Material: ${material}`
@@ -98,7 +96,7 @@ function spellSearch(e){
         }
         
         if(name !== undefined){ 
-            document.getElementById('searchResults').appendChild(spellName)
+            document.getElementById('searchResults').appendChild(raceName)
         }
         
         if(desc !== undefined){ 
@@ -111,39 +109,34 @@ function spellSearch(e){
         if(casting_time !== undefined){ 
             document.getElementById('searchResults').appendChild(castingTime)
         }
-        
-        if(range !== undefined){ 
-            document.getElementById('searchResults').appendChild(ran)
+        if(components !== undefined){ 
+            document.getElementById('searchResults').appendChild(comp)
         }
-        if(area_of_effect !== undefined){ 
-            document.getElementById('searchResults').appendChild(area)
+        if(concentration !== undefined){ 
+            document.getElementById('searchResults').appendChild(conc)
         }
         if(damage !== undefined){ 
             document.getElementById('searchResults').appendChild(dmg)
         }
        
+        if(duration !== undefined){ 
+            document.getElementById('searchResults').appendChild(dur)
+        }
 
         if(higher_level !== undefined){ 
             document.getElementById('searchResults').appendChild(highLvl)
         }
 
-        if(duration !== undefined){ 
-            document.getElementById('searchResults').appendChild(dur)
+        if(level !== undefined){ 
+            document.getElementById('searchResults').appendChild(lvl)
         }
-        
 
         if(material !== undefined){ 
             document.getElementById('searchResults').appendChild(mat)
         }
-        if(components !== undefined){ 
-            document.getElementById('searchResults').appendChild(comp)
-        }
-        if(level !== undefined){ 
-            document.getElementById('searchResults').appendChild(lvl)
-        }
-        
-        if(concentration !== undefined){ 
-            document.getElementById('searchResults').appendChild(conc)
+
+        if(range !== undefined){ 
+            document.getElementById('searchResults').appendChild(ran)
         }
 
         if(ritual !== undefined){ 
@@ -154,13 +147,15 @@ function spellSearch(e){
             document.getElementById('searchResults').appendChild(sch) 
         }
 
-        
+        if(area_of_effect !== undefined){ 
+            document.getElementById('searchResults').appendChild(area)
+        }
     })
     .catch((err) => {
         console.log(err)
         alert('Spell not found. Check spelling.')
     })
-    document.getElementById('spellSearchName').value = ''
+    document.getElementById('raceSearchName').value = ''
 }
 
-document.getElementById('spellSearchBtn').addEventListener('click', spellSearch)
+document.getElementById('raceSearchBtn').addEventListener('click', raceSearch)

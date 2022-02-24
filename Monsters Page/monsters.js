@@ -8,7 +8,7 @@ axios.get('https://www.dnd5eapi.co/api/monsters/')
         }
     })
     .catch((err)=>{
-        console.log('Error getting spells' +  err)
+        console.log('Error getting monsters' +  err)
     })
 
 
@@ -23,9 +23,9 @@ function monsterSearch(e){
     .then((res)=>{
         document.getElementById('searchResults').innerHTML = ''
         console.log(res)
-        let {name, attack_type, casting_time, components, concentration, damage, desc, duration, higher_level, level, material, range, ritual, school, area_of_effect} = res.data;
+        let {name, speed, ability_bonuses, alignment, age, size, size_description, starting_proficiencies, starting_proficiency_options, languages, languages_desc, traits, subraces} = res.data;
         
-        console.log(name, attack_type, casting_time, components, concentration, damage, desc, duration, higher_level, level, material, range, ritual, school)
+        console.log(name, speed, ability_bonuses, alignment, age, size, size_description, starting_proficiencies, starting_proficiency_options, languages, languages_desc, traits, subraces)
 
         let spellName = document.createElement('h3')
         spellName.innerHTML = name

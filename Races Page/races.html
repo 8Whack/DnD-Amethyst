@@ -7,8 +7,8 @@
     <title>Spells</title>
     <link rel ='stylesheet' href = '/styles.css'>
 </head>
-<body id="monstersBody" >
-    <h1 id="title">Monsters</h1>
+<body id="racesBody" >
+    <h1 id="title">Races</h1>
     <div class = 'navbar '>
         <div class = 'dropdown'>
             
@@ -24,17 +24,17 @@
         </div>
     </div>
     
-    <div id="monsterSheetBody">
+    <div id="raceSheetBody">
         
     
     <div id="main" class="row top">
         
         <div id="results" class="column half">
-            <div id="monsterSearchDiv" class="background">
-                <h3>Search for a Monster</h3>
-                <p>No symbols, or spaces after the name, please. <br> If needed, just copy-paste the monster from the list on the right.<br> **PLEASE NOTE: Search results are currently disabled.**</p>
-                <input id="monsterSearchName" type="text" placeholder="Monster Name">
-                <button id="monsterSearchBtn">Search</button>
+            <div id="raceSearchDiv" class="background">
+                <h3>Search for a Race</h3>
+                <p>No symbols, or spaces after the name, please. <br> If needed, just copy-paste the race from the list on the right.<br> **PLEASE NOTE: Search results are currently disabled.**</p>
+                <input id="raceSearchName" type="text" placeholder="Race Name">
+                <button id="raceSearchBtn">Search</button>
             </div>
             <div id="searchResults Div" class =' background column'>
                 <h4>Results</h4>
@@ -43,11 +43,11 @@
                 </div>
             </div>
         </div>
-        <div id="allmonsters" class = 'column'>
+        <div id="allraces" class = 'column'>
             <div  class="background">
-                <h3>List of Monsters</h3>
+                <h3>List of Races</h3>
                 <div id="listDiv">
-                <ul id="monstersList">
+                <ul id="racesList">
 
                 </ul>
                 </div>
@@ -59,6 +59,6 @@
 </div>
 
     <script src="../node_modules/axios/dist/axios.min.js"></script>
-    <script src='monsters.js'></script>
+    <script src='races.js'></script>
 </body>
 </html>
